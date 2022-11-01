@@ -11327,3 +11327,11 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -15rem;
   }
 }
+
+pre {
+  display: block;
+  background-color: #e0e0e0;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+}

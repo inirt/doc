@@ -24,8 +24,9 @@
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#tutorial4">Tutorial 4: Confirmatory Multidimensional IRT</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#tutorial5">Tutorial 5: Higher-Order (Hierarchical) IRT</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#tutorial6">Tutorial 6: Bi-factor IRT</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#functions">Functions: Overview</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#inirtinirt">Function: inirt::inirt(model, data, ...)</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#contribute">Contribute</a>
                 </div>
             </div>
             <!-- Page content wrapper-->
@@ -39,15 +40,15 @@
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="https://inirt.github.io/doc/">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="https://github.com/inirt">Project Github</a></li>
+                                <li class="nav-item"><a class="nav-link" href="https://github.com/inirt/inirt">R Package Github</a></li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Navigate Docs</a>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#!">Action</a>
-                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <a class="dropdown-item" href="#tutorial1">Tutorials</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                        <a class="dropdown-item" href="#functions">R Functions</a>
                                     </div>
                                 </li>
                             </ul>
@@ -58,44 +59,19 @@
                 <div id="quick-start"> 
                     <div class="container-fluid">
                         <h1 class="mt-4">inirt: Quick Start Guide</h1>
-                        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-                        <p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            Make sure to keep all page content within the
-                            <code>#page-content-wrapper</code>
-                            . The top navbar is optional, and just for demonstration. Just create an element with the
-                            <code>#sidebarToggle</code>
-                            ID which will toggle the menu when clicked.
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                        </p>
+                        <h4 class="mt-4">Explanatory Item Response Theory Tools in R</h4>
+                        <p>The inirt project exists to create comprehensive exploratory item response theory (IRT) modeling tools in R.</p>
+                        <p>This website contains the complete package documentation. We include extensive tutorials that cover every topic as well as pages for each user available function.</p>
+                        <h4 class="mt-4">Installation/Setup</h4>
+                        <p>1. Since this is an R pacakge, the user first needs to install R from <a href="https://www.r-project.org/">the R project website</a>.</p>
+                        <p>2. Once R is installed, open an R console and install the devtools package with: </p>
+                        <pre># Install devtools from CRAN<br>install.packages("devtools")</pre>
+                        <p>3. Then, library devtools and use it to install R package inirt:</p>
+                        <pre># Install inirt from Github<br>install_github("inirt/inirt")</pre>
+                        <p>4. Check that the new package is installed by librarying it in R: </p>
+                        <pre># Load the new package in R<br>library(inirt)</pre>
+                        <p>If you see no error message, then the package is installed.</p>
+                        <p>5. If the package fails to install or there is a bug please open an issue on Github at: <a href="https://github.com/inirt/inirt/issues">github.com/inirt/inirt/issues</a> <br> or email me at mjkleinsa@gmail.com</p>
                     </div>
                 </div>
                 <div id="tutorial1"> 
@@ -356,6 +332,24 @@
                         </p>
                     </div>
                 </div>
+                <div id="functions"> 
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Functions: Overview</h1>
+                        <p>
+                            This section explains the way the inirt package's functions work. For tutorials, see the previous sections.
+                        </p>
+                        <h4>Overview of the inirt package's functions</h4>
+                        <p>
+                            The most important function from inirt is the inirt function:
+                            <pre>inirt::inirt(model, data, ...)</pre>
+                            Where model is an inirt model, data is inirt, data, ... etc
+                        </p>
+                        <p>
+                            NOTE: if you library the package first, then one only needs the call the function (no :: required):
+                            <pre>library(inirt)<br>inirt(model, data, ...)</pre>
+                        </p>
+                    </div>
+                </div>
                 <div id="inirtinirt"> 
                     <div class="container-fluid">
                         <h1 class="mt-4">inirt::inirt(model, data, ...)</h1>
@@ -397,6 +391,15 @@
                                 Quick Start Guide
                             </p>
                         </p>
+                    </div>
+                </div>
+                <div id="contribute">
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Contribute to the inirt Project</h1>
+                        <p>For inquiries, or to submit a request to be added to this project as a contributor, email me at mjkleinsa@gmail.com.</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <small>&copy; Copyright 2022, Michael Kleinsasser</small>
+                        <br><br>
                     </div>
                 </div>
             </div>
