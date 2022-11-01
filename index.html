@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>inirt R Package Documentation</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/hex-inirt4.png" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -15,7 +15,7 @@
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light"><h5><b>R Package: inirt</b></h5></div>
+                <div class="sidebar-heading border-bottom bg-light"><h5><img src="assets/hex-inirt4.png" alt="Favicon" style="width:40px;height:40px;"><b>  &nbsp &nbsp &nbsp   R Package: inirt</b></h5></div>
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#quick-start">Quick Start Guide</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#tutorial1">Tutorial 1: First Model</a>
@@ -60,7 +60,7 @@
                     <div class="container-fluid">
                         <h1 class="mt-4">inirt: Quick Start Guide</h1>
                         <h4 class="mt-4">Explanatory Item Response Theory Tools in R</h4>
-                        <p>The inirt project exists to create comprehensive exploratory item response theory (IRT) modeling tools in R.</p>
+                        <p>The inirt project exists to create comprehensive explanatory item response theory (IRT) modeling tools in R.</p>
                         <p>This website contains the complete package documentation. We include extensive tutorials that cover every topic as well as pages for each user available function.</p>
                         <h4 class="mt-4">Installation/Setup</h4>
                         <p>1. Since this is an R pacakge, the user first needs to install R from <a href="https://www.r-project.org/">the R project website</a>.</p>
@@ -77,87 +77,41 @@
                 <div id="tutorial1"> 
                     <div class="container-fluid">
                         <h1 class="mt-4">Tutorial 1: First Model</h1>
-                        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-                        <p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            Make sure to keep all page content within the
-                            <code>#page-content-wrapper</code>
-                            . The top navbar is optional, and just for demonstration. Just create an element with the
-                            <code>#sidebarToggle</code>
-                            ID which will toggle the menu when clicked.
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                        </p>
+                        <p>This section exists to confirm that the package works on a simple but non-trivial example.</p>
+                        <p>Run the following R chunk: </p>
+                        <pre>data(dat)<br>mod = inirt::inirt(model, data, ...)<br>summary(mod)</pre>
+                        <p>Let's inspect the summary output piece by piece: </p>
+                        <pre>summary(mod)</pre>
                     </div>
                 </div>
                 <div id="tutorial2"> 
                     <div class="container-fluid">
                         <h1 class="mt-4">Tutorial 2: Univariate IRT</h1>
-                        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-                        <p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            Make sure to keep all page content within the
-                            <code>#page-content-wrapper</code>
-                            . The top navbar is optional, and just for demonstration. Just create an element with the
-                            <code>#sidebarToggle</code>
-                            ID which will toggle the menu when clicked.
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                            <p> 
-                                Quick Start Guide
-                            </p>
-                        </p>
+                        <p>This tutorial will cover the possibilities of univariate IRT within the inirt package.</p>
+                        <h4 class="mt-4">2-Parameter Logistic Model (2-PL)</h4>
+                        <p>Description of the model: </p>
+                        <p>R code to fit the model: </p>
+                        <pre>data(dat)<br>mod = inirt::inirt(model, data, ...)<br>summary(mod)</pre>
+                        <h4 class="mt-4">2-Parameter Polytomous Model</h4>
+                        <p>Description of the model: </p>
+                        <p>R code to fit the model: </p>
+                        <pre>data(dat)<br>mod = inirt::inirt(model, data, ...)<br>summary(mod)</pre>
+                        <h4 class="mt-4">Models with Missing Data</h4>
+                        <p>Description of the model: </p>
+                        <p>R code to fit the model: </p>
+                        <pre>data(dat)<br>mod = inirt::inirt(model, data, ...)<br>summary(mod)</pre>
+                        <h4 class="mt-4">3-Parameter Models (3-PL)</h4>
+                        <p>Description of the model: </p>
+                        <p>R code to fit the model: </p>
+                        <pre>data(dat)<br>mod = inirt::inirt(model, data, ...)<br>summary(mod)</pre>
+                        <h4 class="mt-4">Explanatory Model</h4>
+                        <p>Description of the model: </p>
+                        <p>R code to fit the model: </p>
+                        <pre>data(dat)<br>mod = inirt::inirt(model, data, ...)<br>summary(mod)</pre>
+                        <h4 class="mt-4">Explanatory Model with Missing Data</h4>
+                        <p>Description of the model: </p>
+                        <p>R code to fit the model: </p>
+                        <pre>data(dat)<br>mod = inirt::inirt(model, data, ...)<br>summary(mod)</pre>
                     </div>
                 </div>
                 <div id="tutorial3"> 
