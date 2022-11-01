@@ -89,6 +89,14 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+pre {
+  display: block;
+  background-color: #e0e0e0;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -11326,12 +11334,4 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -15rem;
   }
-}
-
-pre {
-  display: block;
-  background-color: #e0e0e0;
-  font-family: monospace;
-  white-space: pre;
-  margin: 1em 0;
 }
