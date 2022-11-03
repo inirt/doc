@@ -27,6 +27,8 @@
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#functions">Functions: Overview</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#inirtinirt">Function: inirt::inirt(model, data, ...)</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#contribute">Contribute</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#FutureFeatures">Future Features</a>
+
                 </div>
             </div>
             <!-- Page content wrapper-->
@@ -72,16 +74,25 @@
                         <pre># Load the new package in R<br>library(inirt)</pre>
                         <p>If you see no error message, then the package is installed.</p>
                         <p>5. If the package fails to install or there is a bug please open an issue on Github at: <a href="https://github.com/inirt/inirt/issues">github.com/inirt/inirt/issues</a> <br> or email me at mjkleinsa@gmail.com</p>
+                        <p>6. The best way to learn this software is to go through the following sections of this document, which include a set of tutorials and sections detailing each R function.</p>
+
                     </div>
                 </div>
                 <div id="tutorial1"> 
                     <div class="container-fluid">
-                        <h1 class="mt-4">Tutorial 1: First Model</h1>
+                        <h1 class="mt-4">Tutorial 1: A First Model</h1>
                         <p>This section exists to confirm that the package works on a simple but non-trivial example.</p>
                         <p>Run the following R chunk: </p>
-                        <pre>data(dat)<br>mod = inirt::inirt(model, data, ...)<br>summary(mod)</pre>
-                        <p>Let's inspect the summary output piece by piece: </p>
-                        <pre>summary(mod)</pre>
+                        <pre>library(inirt)<br>data("d2plnr")<br>fit = inirt(data = d2plnr, dims = 1, method = "vb", tol_rel_obj = 0.0001, iter = 2e3, init = 0)</pre>
+                        <p>Inspect the summary output: </p>
+                        <pre>library(rstan)<br>summary(fit) # full summary<br>summary(fit, pars = "alpha")$summary    # alpha (slope) params<br>summary(fit, pars = c("delta"))$summary # difficulty params<br>summary(fit, pars = c("theta"))$summary # ability params</pre>
+                        <p>Rather than the default method (method = "vb"), try Hamiltonian MCMC with method = "hmc": </p>
+                        <pre>fit = inirt(data, dims = 1, method = "hmc", chains = 1, iter = 300, init = 0)</pre>
+                        <p>Again, inspect the summary output in the same way as before.</p>
+                        <p>The previous example's 25 survey questions were binary (1 or 2). Another data set from the package includes polytomous respose options (1,2,..,6). Here is the example code:</p>
+                        <pre>fit = inirt(data = d2plnrNcat, dims = 1, method = "vb", tol_rel_obj = 0.0001,<br> iter = 2e3, init = 0)</pre>
+                        <p>The rest of the tutorial sections are a deep dive into everything the software can do.</p>
+
                     </div>
                 </div>
                 <div id="tutorial2"> 
@@ -351,6 +362,16 @@
                     <div class="container-fluid">
                         <h1 class="mt-4">Contribute to the inirt Project</h1>
                         <p>For inquiries, or to submit a request to be added to this project as a contributor, email me at mjkleinsa@gmail.com.</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+                <div id="FutureFeatures">
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Future Features</h1>
+                        <p>List of features I am currently working on: </p>
+                        <p>Missing data</p>
+                        <p>Variable number of categories of response</p>
+                        <p>Sampling weights</p>
                         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         <small>&copy; Copyright 2022, Michael Kleinsasser</small>
                         <br><br>
